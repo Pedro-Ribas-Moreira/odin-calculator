@@ -15,9 +15,23 @@ document.addEventListener("click", (e) => {
 });
 //pressing operators
 //pressing dot
+const dotBtn = document.querySelector("#dot");
+dotBtn.addEventListener("click", () => {
+  let index = current.indexOf(".");
+  if (index == -1) {
+    const dot = ".";
+    current.push(dot);
+    result.innerText = current.join("");
+  } else {
+    alert("this number is already a double");
+  }
+});
 //pressing clear
 const clearBtn = document.querySelector("#clear__btn");
-
+clearBtn.addEventListener("click", () => {
+  current.length = 0;
+  result.innerText = current.join("");
+});
 //pressing delete
 
 const deleteBtn = document.querySelector("#dlt__btn");
