@@ -1,6 +1,7 @@
 const result = document.querySelector(".result");
 let current = [];
 let previous = [];
+let operator = null;
 
 //pressing numbers
 document.addEventListener("click", (e) => {
@@ -14,6 +15,15 @@ document.addEventListener("click", (e) => {
   }
 });
 //pressing operators
+document.addEventListener("click", (e) => {
+    if (e.target.classList.contains("operator")) {
+      if
+    operator = e.target.innerText;
+    previous = [...current].join("");
+    current.length = 0;
+    result.innerText = current.join("");
+  }
+});
 //pressing dot
 const dotBtn = document.querySelector("#dot");
 dotBtn.addEventListener("click", () => {
