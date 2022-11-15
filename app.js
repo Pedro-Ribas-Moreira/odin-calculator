@@ -16,12 +16,24 @@ document.addEventListener("click", (e) => {
 });
 //pressing operators
 document.addEventListener("click", (e) => {
-    if (e.target.classList.contains("operator")) {
-      if
-    operator = e.target.innerText;
-    previous = [...current].join("");
-    current.length = 0;
-    result.innerText = current.join("");
+  if (e.target.classList.contains("operator")) {
+    if (operator == null) {
+      operator = e.target.innerText;
+      previous = [...current].join("");
+      current.length = 0;
+      result.innerText = current.join("");
+    } else {
+      previous = [...current].join("");
+      let calculation = calculate(
+        parseFloat(previous),
+        parseFloat(current.join("")),
+        operator
+      );
+      current.length = 0;
+      current.push(calculation);
+      result.innerText = current.join("");
+      operator = e.target.innerText;
+    }
   }
 });
 //pressing dot
@@ -64,4 +76,21 @@ const minus = (a, b) => {
 
 const divide = (a, b) => {
   return a / b;
+};
+
+const calculate = (a, b, operator) => {
+  switch (operator.toLowerCase()) {
+    case "+":
+      sum(a, b);
+      break;
+    case "-":
+      minus(a, b);
+      break;
+    case "x":
+      multiply(a, b);
+      break;
+    default:
+      divide(a, b);
+      break;
+  }
 };
