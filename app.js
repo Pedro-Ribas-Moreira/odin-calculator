@@ -15,10 +15,52 @@ document.addEventListener("click", (e) => {
   }
 });
 //pressing operators
-// document.addEventListener("click", (e) => {
-//   if (e.target.classList.contains("operator")) {
-//   }
-// });
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("operator")) {
+    if (operator == null) {
+      operator = e.target.innerText;
+      previous = current;
+      current = "";
+    } else {
+      let result;
+      let a = parseFloat(previous);
+      let b = parseFloat(current);
+
+      if (operator == "-") {
+        result = minus(a, b);
+      } else if (operator == "x") {
+        result = multiply(a, b);
+      } else if (operator == "+") {
+        result = sum(a, b);
+      } else {
+        result = divide(a, b);
+      }
+      previous = result;
+      current = "";
+      display.innerHTML = result.toString();
+    }
+  }
+  if (e.target.classList.contains("result")) {
+    if (operator !== null && current.length >= 1) {
+      let result;
+      let a = parseFloat(previous);
+      let b = parseFloat(current);
+      if (operator == "-") {
+        result = minus(a, b);
+      } else if (operator == "x") {
+        result = multiply(a, b);
+      } else if (operator == "+") {
+        result = sum(a, b);
+      } else {
+        result = divide(a, b);
+      }
+
+      previous = result;
+      current = "";
+      display.innerHTML = result.toString();
+    }
+  }
+});
 //pressing dot
 const dotBtn = document.querySelector("#dot");
 dotBtn.addEventListener("click", () => {
