@@ -40,26 +40,6 @@ document.addEventListener("click", (e) => {
       display.innerHTML = result.toString();
     }
   }
-  if (e.target.classList.contains("result")) {
-    if (operator !== null && current.length >= 1) {
-      let result;
-      let a = parseFloat(previous);
-      let b = parseFloat(current);
-      if (operator == "-") {
-        result = minus(a, b);
-      } else if (operator == "x") {
-        result = multiply(a, b);
-      } else if (operator == "+") {
-        result = sum(a, b);
-      } else {
-        result = divide(a, b);
-      }
-
-      previous = result;
-      current = "";
-      display.innerHTML = result.toString();
-    }
-  }
 });
 //pressing dot
 const dotBtn = document.querySelector("#dot");
@@ -76,6 +56,8 @@ dotBtn.addEventListener("click", () => {
 const clearBtn = document.querySelector("#clear__btn");
 clearBtn.addEventListener("click", () => {
   current = "";
+  previous = "";
+  operator = null;
   display.innerText = current;
 });
 //pressing delete
@@ -105,3 +87,31 @@ const divide = (a, b) => {
 // const calculate = (a, b, operator) => {};
 
 // calculate(10, 5, "+");
+
+const processOperation = () => {
+  if (current == "" || previous == "") {
+    return;
+  }
+
+  let result;
+  let a = parseFloat(previous);
+  let b = parseFloat(current);
+  switch (operator) {
+    case "-":
+      result = minus(a, b);
+      break;
+    case "+":
+      result = sum(a, b);
+      break;
+    case "x":
+      result = multiply(a, b);
+      break;
+    default:
+      result = divide(a, b);
+      break;
+  }
+  operator = null;
+  previous = current;
+  current = result.toString();
+  display.innerHTML = current;
+};
