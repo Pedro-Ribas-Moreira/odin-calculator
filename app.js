@@ -28,7 +28,7 @@ document.addEventListener("click", (e) => {
 
       if (operator == "-") {
         result = minus(a, b);
-      } else if (operator == "x") {
+      } else if (operator == "x" || operator == "*") {
         result = multiply(a, b);
       } else if (operator == "+") {
         result = sum(a, b);
@@ -106,6 +106,9 @@ const processOperation = () => {
     case "x":
       result = multiply(a, b);
       break;
+    case "*":
+      result = multiply(a, b);
+      break;
     default:
       result = divide(a, b);
       break;
@@ -115,3 +118,52 @@ const processOperation = () => {
   current = result.toString();
   display.innerHTML = current;
 };
+
+// keypress event listeners
+document.addEventListener("keypress", (e) => {
+  console.log(e);
+  let input = e.key;
+  if (!isNaN(input)) {
+    current += input;
+    display.innerHTML = current;
+  } else if (
+    input == "-" ||
+    input == "x" ||
+    input == "*" ||
+    input == "/" ||
+    input == "+"
+  ) {
+    if (operator == null) {
+      operator = input;
+      previous = current;
+      current = "";
+    } else {
+      let result;
+      let a = parseFloat(previous);
+      let b = parseFloat(current);
+
+      if (operator == "-") {
+        result = minus(a, b);
+      } else if (operator == "x" || operator == "*") {
+        result = multiply(a, b);
+      } else if (operator == "+") {
+        result = sum(a, b);
+      } else {
+        result = divide(a, b);
+      }
+      previous = result;
+      current = "";
+      display.innerHTML = result.toString();
+    }
+  } else if (input == "Enter") {
+    processOperation();
+  } else if (input == ".") {
+    let index = current.indexOf(".");
+    if (index == -1) {
+      current += ".";
+      display.innerText = current;
+    } else {
+      alert("this number is already a double");
+    }
+  }
+});
