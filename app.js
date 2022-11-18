@@ -5,40 +5,16 @@ let operator = null;
 
 //pressing numbers
 document.addEventListener("click", (e) => {
+  if (current.length > 15) {
+    alert("this number is too big!");
+    return;
+  }
   if (e.target.classList.contains("number")) {
-    current += e.target.innerText;
-    if (current.length > 15) {
-      alert("this number is too big!");
+    if (current.length == 0 && e.target.innerText == "0") {
       return;
     }
+    current += e.target.innerText;
     display.innerText = current;
-  }
-});
-//pressing operators
-document.addEventListener("click", (e) => {
-  if (e.target.classList.contains("operator")) {
-    if (operator == null) {
-      operator = e.target.innerText;
-      previous = current;
-      current = "";
-    } else {
-      let result;
-      let a = parseFloat(previous);
-      let b = parseFloat(current);
-
-      if (operator == "-") {
-        result = minus(a, b);
-      } else if (operator == "x" || operator == "*") {
-        result = multiply(a, b);
-      } else if (operator == "+") {
-        result = sum(a, b);
-      } else {
-        result = divide(a, b);
-      }
-      previous = result;
-      current = "";
-      display.innerHTML = result.toString();
-    }
   }
 });
 //pressing dot
@@ -87,6 +63,17 @@ const divide = (a, b) => {
 // const calculate = (a, b, operator) => {};
 
 // calculate(10, 5, "+");
+const processOperator = (e) => {
+  if (operator == null) {
+    operator = e.target.innerText;
+    previous = current;
+    current = "";
+    display.innerHTML = operator;
+  } else {
+    operator = e.target.innerHTML;
+    display.innerHTML = operator;
+  }
+};
 
 const processOperation = () => {
   if (current == "" || previous == "") {
@@ -133,31 +120,13 @@ document.addEventListener("keypress", (e) => {
     input == "/" ||
     input == "+"
   ) {
-    if (operator == null) {
-      operator = input;
-      previous = current;
-      current = "";
-    } else {
-      let result;
-      let a = parseFloat(previous);
-      let b = parseFloat(current);
-
-      if (operator == "-") {
-        result = minus(a, b);
-      } else if (operator == "x" || operator == "*") {
-        result = multiply(a, b);
-      } else if (operator == "+") {
-        result = sum(a, b);
-      } else {
-        result = divide(a, b);
-      }
-      previous = result;
-      current = "";
-      display.innerHTML = result.toString();
-    }
-  } else if (input == "Enter") {
+    operator = input == "*" ? "x" : e.target.innerText;
+    previous = current;
+    current = "";
+    display.innerHTML = operator;
+  } else if ((input = "Enter")) {
     processOperation();
-  } else if (input == ".") {
+  } else if (e) {
     let index = current.indexOf(".");
     if (index == -1) {
       current += ".";
