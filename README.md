@@ -79,15 +79,13 @@
 ## About The Project
 
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
-<p>This project consists of an assessment for the Odin Project, to improve Javascript DOM manipulation skills and master CSS styling.
+<p>This project consists of an assessment for the Odin Project, to improve Javascript skills and master CSS styling.
 <br>
-<br>
-
 In this project, Javascript was used to create the main function for calculations and to listening for keypress in the keyboard.
-Also, others event listeners such as onchange and onclick was used combined with CSS to delivery a better user experience.
+Also, others event listeners such as onclick combined with CSS to delivery a better user experience.
 
 </p>
-<!-- Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `Pedro-Ribas-Moreira`, `odin-foundations-rock-paper-scissors`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `Eatch-A-Sketch`, `project_description` -->
+<!-- Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `Pedro-Ribas-Moreira`, `odin-foundations-rock-paper-scissors`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `Calculator`, `project_description` -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
