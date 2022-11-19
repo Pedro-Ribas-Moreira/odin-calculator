@@ -111,22 +111,13 @@ document.addEventListener("keypress", (e) => {
   console.log(e);
   let input = e.key;
   if (!isNaN(input)) {
+    if (current.length == 0 && input == "0") {
+      return;
+    }
     current += input;
     display.innerHTML = current;
-  } else if (
-    input == "-" ||
-    input == "x" ||
-    input == "*" ||
-    input == "/" ||
-    input == "+"
-  ) {
-    operator = input == "*" ? "x" : e.target.innerText;
-    previous = current;
-    current = "";
-    display.innerHTML = operator;
-  } else if ((input = "Enter")) {
-    processOperation();
-  } else if (e) {
+  } else if (input == ".") {
+    console.log("here");
     let index = current.indexOf(".");
     if (index == -1) {
       current += ".";
@@ -134,5 +125,18 @@ document.addEventListener("keypress", (e) => {
     } else {
       alert("this number is already a double");
     }
+  } else if (
+    input == "-" ||
+    input == "x" ||
+    input == "*" ||
+    input == "/" ||
+    input == "+"
+  ) {
+    operator = input == "*" ? "x" : e.key;
+    previous = current;
+    current = "";
+    display.innerHTML = operator;
+  } else if ((input = "Enter")) {
+    processOperation();
   }
 });
