@@ -19,10 +19,10 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
-[![Contributors][contributors-shield]](hhttps://github.com/Pedro-Ribas-Moreira/odin-etch-a-sketch/graphs/contributors)
-[![Forks][forks-shield]](https://github.com/Pedro-Ribas-Moreira/odin-etch-a-sketch/network/members)
-[![Stargazers][stars-shield]](https://github.com/Pedro-Ribas-Moreira/odin-etch-a-sketch/stargazers)
-[![Issues][issues-shield]](https://github.com/Pedro-Ribas-Moreira/odin-etch-a-sketch/issues)
+[![Contributors][contributors-shield]](https://github.com/Pedro-Ribas-Moreira/odin-calculator/graphs/contributors)
+[![Forks][forks-shield]](https://github.com/Pedro-Ribas-Moreira/odin-calculator/network/members)
+[![Stargazers][stars-shield]](https://github.com/Pedro-Ribas-Moreira/odin-calculator/stargazers)
+[![Issues][issues-shield]](https://github.com/Pedro-Ribas-Moreira/odin-calculator/issues)
 [![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/pedroh-moreira/)
 
 <!-- [![MIT License][license-shield]][license-url] -->
@@ -30,23 +30,23 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <!-- <a href="https://github.com/Pedro-Ribas-Moreira/odin-etch-a-sketch">
+  <!-- <a href="https://github.com/Pedro-Ribas-Moreira/odin-calculator">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a> -->
 
-<h1 align="center">Etch-A-Sketch</h1>
+<h1 align="center">Calculator</h1>
 
   <p align="center">
-    A Etch-A-Sketch tool, part of the <a target="_blank" href="https://www.theodinproject.com/lessons/foundations-etch-a-sketch">The Odin Project - Fullstack Development Course </a> 
+    A calculator tool, part of the <a target="_blank" href="https://www.theodinproject.com/lessons/foundations-calculator">The Odin Project - Fullstack Development Course </a> 
     <br />
-    <!-- <a href="https://github.com/Pedro-Ribas-Moreira/odin-etch-a-sketch"><strong>Explore the docs »</strong></a> -->
+    <!-- <a href="https://github.com/Pedro-Ribas-Moreira/odin-calculator"><strong>Explore the docs »</strong></a> -->
     <!-- <br /> -->
     <br />
-    <a href="https://pedro-ribas-moreira.github.io/odin-etch-a-sketch/">View Demo</a>
+    <a href="https://pedro-ribas-moreira.github.io/odin-calculator/">View Demo</a>
     ·
-    <a href="https://github.com/Pedro-Ribas-Moreira/odin-etch-a-sketch/issues">Report Bug</a>
+    <a href="https://github.com/Pedro-Ribas-Moreira/odin-calculator/issues">Report Bug</a>
     ·
-    <a href="https://github.com/Pedro-Ribas-Moreira/odin-etch-a-sketch/issues">Request Feature</a>
+    <a href="https://github.com/Pedro-Ribas-Moreira/odin-calculator/issues">Request Feature</a>
   </p>
 </div>
 
@@ -83,7 +83,7 @@
 <br>
 <br>
 
-In this project, Javascript was used to create the main function for the drawing with onmouseover and onmouse down event listener.
+In this project, Javascript was used to create the main function for calculations and to listening for keypress in the keyboard.
 Also, others event listeners such as onchange and onclick was used combined with CSS to delivery a better user experience.
 
 </p>
@@ -131,7 +131,7 @@ This is an example of how to list things you need to use the software and how to
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/Pedro-Ribas-Moreira/odin-etch-a-sketch
+   git clone https://github.com/Pedro-Ribas-Moreira/odin-calculator
    ```
 2. Run in localhost with a live server
    ```sh
@@ -144,17 +144,8 @@ This is an example of how to list things you need to use the software and how to
 
 ## How to use
 
-To start drawing you have to hover the mouse with the left button pressed in the canvas area.
-
-## Tools
-
-1. Colors selections: Tools to set the pen and background colors.
-2. Eraser: Tool that will paint back the section to the background color,
-3. Rainbow: Tool, that will draw using the colors of the rainbow.
-4. The Lighten and Shading: tools to manipulate the brightness of the colors in the canvas.
-5. Gride Size: Will change the number of rows and columns
-6. Toggle Grid Line: remove and add the grid borders
-7. Clear: reset the canvas for a fresh start.
+To start select the first number than select an operation then the second number.
+After hitting enter or "=" the result will show up in the screen.
 
 <img src="./assets/image.png" alt="Logo" width="500" height="300">
 
@@ -171,7 +162,7 @@ To start drawing you have to hover the mouse with the left button pressed in the
 - [ ] Feature 3
   - [ ] Nested Feature
 
-See the [open issues](https://github.com/Pedro-Ribas-Moreira/odin-etch-a-sketch/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/Pedro-Ribas-Moreira/odin-calculator/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
@@ -206,7 +197,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Pedro Moreira - phribasmoreira@gmail.com
 
-Project Link: [https://github.com/Pedro-Ribas-Moreira/odin-etch-a-sketch](https://github.com/Pedro-Ribas-Moreira/odin-etch-a-sketch)
+Project Link: [https://github.com/Pedro-Ribas-Moreira/odin-calculator](https://github.com/Pedro-Ribas-Moreira/odin-calculator)
 
 [![linkedin-shield]](https://www.linkedin.com/in/pedroh-moreira/)
 
@@ -226,15 +217,15 @@ Project Link: [https://github.com/Pedro-Ribas-Moreira/odin-etch-a-sketch](https:
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
 [contributors-shield]: https://img.shields.io/github/contributors/Pedro-Ribas-Moreira/odin-foundations-rock-paper-scissors.svg?style=for-the-badge
-[contributors-url]: https://github.com/Pedro-Ribas-Moreira/odin-etch-a-sketch/graphs/contributors
+[contributors-url]: https://github.com/Pedro-Ribas-Moreira/odin-calculator/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/Pedro-Ribas-Moreira/odin-foundations-rock-paper-scissors.svg?style=for-the-badge
-[forks-url]: https://github.com/Pedro-Ribas-Moreira/odin-etch-a-sketch/network/members
+[forks-url]: https://github.com/Pedro-Ribas-Moreira/odin-calculator/network/members
 [stars-shield]: https://img.shields.io/github/stars/Pedro-Ribas-Moreira/odin-foundations-rock-paper-scissors.svg?style=for-the-badge
-[stars-url]: https://github.com/Pedro-Ribas-Moreira/odin-etch-a-sketch/stargazers
+[stars-url]: https://github.com/Pedro-Ribas-Moreira/odin-calculator/stargazers
 [issues-shield]: https://img.shields.io/github/issues/Pedro-Ribas-Moreira/odin-foundations-rock-paper-scissors.svg?style=for-the-badge
-[issues-url]: https://github.com/Pedro-Ribas-Moreira/odin-etch-a-sketch/issues
+[issues-url]: https://github.com/Pedro-Ribas-Moreira/odin-calculator/issues
 [license-shield]: https://img.shields.io/github/license/Pedro-Ribas-Moreira/odin-foundations-rock-paper-scissors.svg?style=for-the-badge
-[license-url]: https://github.com/Pedro-Ribas-Moreira/odin-etch-a-sketch/blob/master/LICENSE.txt
+[license-url]: https://github.com/Pedro-Ribas-Moreira/odin-calculator/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/pedroh-moreira/
 [product-screenshot]: images/screenshot.png
