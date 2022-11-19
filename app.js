@@ -139,9 +139,6 @@ document.addEventListener("keypress", (e) => {
     current = "";
     display.innerHTML = operator;
   } else if ((input = "Enter")) {
-    console.log(previous);
-    console.log(current);
-    console.log(operator);
     processOperation();
   }
 });
