@@ -100,15 +100,17 @@ const processOperation = () => {
       result = divide(a, b);
       break;
   }
-  operator = null;
+  console.log("from result");
   previous = current;
   current = result.toString();
-  display.innerHTML = current;
+  display.innerHTML = current.length >= 15 ? "error" : current;
 };
-
 // keypress event listeners
 document.addEventListener("keypress", (e) => {
-  console.log(e);
+  if (current.length > 15) {
+    alert("this number is too big!");
+    return;
+  }
   let input = e.key;
   if (!isNaN(input)) {
     if (current.length == 0 && input == "0") {
@@ -137,6 +139,9 @@ document.addEventListener("keypress", (e) => {
     current = "";
     display.innerHTML = operator;
   } else if ((input = "Enter")) {
+    console.log(previous);
+    console.log(current);
+    console.log(operator);
     processOperation();
   }
 });
