@@ -85,3 +85,22 @@ button:active {
 
   transition: All 0.2 ease;
 }
+footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  min-height: 80px;
+  background-color: #d8d8d8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer > a {
+  margin-left: 8px;
+  text-decoration: none;
+  color: black;
+}
+footer > i {
+  color: black;
+}
